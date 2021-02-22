@@ -6,6 +6,26 @@ import java.util.TreeMap;
 
 public class RimChack {
 
+    private String rimnumb1;
+    private String rimnumb2;
+    private char oper;
+
+    public String getRimnumb1() {
+        return rimnumb1;
+    }
+
+    public String getRimnumb2() {
+        return rimnumb2;
+    }
+
+    public char getOper() {
+        return oper;
+    }
+
+    public static Map<Integer, String> getRim() {
+        return rim;
+    }
+
     static Map<Integer, String> rim = new TreeMap<>() {{
         put(1, "I");
         put(2, "II");
