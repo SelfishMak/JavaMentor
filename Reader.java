@@ -38,8 +38,6 @@ public class Reader {
         return oper;
     }
 
-
-
         public void read () {
 //            Массивы для проверки ввода
             String[] arab = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
@@ -48,7 +46,7 @@ public class Reader {
             Scanner scanner = new Scanner(System.in);
             String txt = scanner.nextLine();
 
-            txt = txt.substring(0, txt.length() - 1);
+            txt = txt.substring(0, txt.length() - 0);
             String[] blocks = txt.split("[+-/*]");
             oper = txt.charAt(blocks[0].length());
 
@@ -66,20 +64,17 @@ public class Reader {
                 if (arab[i].equals(blocks[0]) || arab[i].equals(blocks[1])) {
                     arnumb1 = Integer.parseInt(blocks[0]);
                     arnumb2 = Integer.parseInt(blocks[1]);
-
                 }
             }
             if (arnumb1 > 0 || arnumb2 > 0) {
                 checkArabia ();
             }
 
-
 //          Если введи римские цифры
             for (int j = 0; j < rim.length; j++) {
                 if (rim[j].equals(res1) || rim[j].equals(res2)) {
                     rimnumb1 = res1;
                     rimnumb2 = res2;
-
                 }
             }
 
